@@ -20,13 +20,14 @@ body {
   );
   color: var(--text);
   min-height: 100dvh;
-  display: grid;
+  display: block;
   place-items: center;
   padding: 24px;
 }
 
 .container {
   width: min(960px, 92vw);
+  margin: 0 auto;
   background: rgba(21, 25, 53, 0.8);
   border: 1px solid #2a2f55;
   border-radius: 20px;
