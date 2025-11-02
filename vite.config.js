@@ -8,7 +8,7 @@ const repoName = 'goit-advancedjs-hw-02';
 
 export default defineConfig(({ command }) => {
   return {
-    base: `/goit-advancedjs-hw-02/`,
+    base: '/goit-advancedjs-hw-02/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
