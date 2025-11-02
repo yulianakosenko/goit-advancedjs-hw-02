@@ -125,3 +125,61 @@ ul {
   list-style-position: inside;
   padding-left: 0;
 }
+/* === Оформлення головної сторінки з посиланнями === */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  gap: 28px;
+}
+
+.home__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--text);
+  margin: 0;
+  text-shadow: 0 0 12px rgba(122, 162, 255, 0.25);
+}
+
+.home__subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: -8px;
+}
+
+.home__links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.home__links a {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 14px;
+  border: 1px solid #2a2f55;
+  background: linear-gradient(180deg, #1a2060 0%, #101433 100%);
+  color: #e7e9f3;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+.home__links a:hover {
+  background: linear-gradient(180deg, #27317a 0%, #161b48 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.home__links a:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
