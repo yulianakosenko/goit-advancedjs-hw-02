@@ -3,6 +3,8 @@
   --card: #151935;
   --text: #e7e9f3;
   --muted: #9aa2c7;
+  --link: #7aa2ff;
+  --link-visited: #aebcff;
 }
 
 * {
@@ -58,6 +60,7 @@ button {
   color: var(--text);
   cursor: pointer;
 }
+
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -69,6 +72,7 @@ button:disabled {
   gap: 12px;
   margin-top: 8px;
 }
+
 .field {
   background: #11163a;
   border: 1px solid #2a2f55;
@@ -76,12 +80,14 @@ button:disabled {
   padding: 14px;
   text-align: center;
 }
+
 .value {
   display: block;
   font-variant-numeric: tabular-nums;
   font-size: 34px;
   line-height: 1;
 }
+
 .label {
   display: block;
   margin-top: 6px;
@@ -90,24 +96,32 @@ button:disabled {
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
-/* Посилання — контрастні та помітні */
-a {
-  color: #7aa2ff; /* яскравий синій на темному фоні */
+
+/* === Лише оформлення посилань  === */
+.container a,
+.container a:visited {
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 2px;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
 }
-a:visited {
-  color: #aebcff;
-} /* інший відтінок для відвіданих */
-a:hover {
+
+.container a:visited {
+  color: var(--link-visited);
+}
+
+.container a:hover {
   text-decoration-thickness: 2px;
+  color: #9bc2ff;
 }
-a:focus-visible {
-  outline: 2px solid #7aa2ff;
+
+.container a:focus-visible {
+  outline: 2px solid var(--link);
   outline-offset: 2px;
 }
 
-/* Щоб маркери списку не «губилися» */
 ul {
-  list-style-position: outside;
+  list-style-position: inside;
+  padding-left: 0;
 }
