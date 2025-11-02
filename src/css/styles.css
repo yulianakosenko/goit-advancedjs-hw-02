@@ -21,7 +21,6 @@ body {
   color: var(--text);
   min-height: 100dvh;
   display: block;
-  place-items: center;
   padding: 24px;
 }
 
@@ -90,4 +89,25 @@ button:disabled {
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+/* Посилання — контрастні та помітні */
+a {
+  color: #7aa2ff; /* яскравий синій на темному фоні */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:visited {
+  color: #aebcff;
+} /* інший відтінок для відвіданих */
+a:hover {
+  text-decoration-thickness: 2px;
+}
+a:focus-visible {
+  outline: 2px solid #7aa2ff;
+  outline-offset: 2px;
+}
+
+/* Щоб маркери списку не «губилися» */
+ul {
+  list-style-position: outside;
 }
